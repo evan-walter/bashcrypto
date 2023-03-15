@@ -4,7 +4,7 @@
 
 After I upgraded from MacOS Monterey to Ventura, I was unable to run this script. I started a fix per [this post](https://community.jamf.com/t5/jamf-pro/encrypted-openssl-aes-256-macos-monterey-cannot-be-decrypted-with/td-p/277416). I have not finished implementing the fix. As a solution for now, I was able to successfully execute the following command on my local machine using the encryption password I had created.
 
-`openssl aes-256-cbc -d -a -md md5 -in [INPUT_FILE] -out [OUTPUT_FILE]`
+`openssl aes-256-cbc -d -a -md md5 -in INPUT -out OUTPUT`
 ## Usage
 
 ### Options

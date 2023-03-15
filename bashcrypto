@@ -146,7 +146,7 @@ function decrypt() {
         elif [[ -d $INPUT_FILE ]]; then
             DIR=$INPUT_FILE/*
             for file in $DIR; do
-                openssl $CIPHERMODE -d -a -in $file -out $file.$OUTPUT_FILE
+                openssl $CIPHERMODE -d -md -a -in $file -out $file.$OUTPUT_FILE
 				if [[ $TARMODE == 1 ]]; then
 					tar -xvf $OUTPUT_FILE
 				fi
